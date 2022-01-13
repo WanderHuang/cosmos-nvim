@@ -198,6 +198,10 @@ require('packer').startup(function(use)
 
   use 'danilamihailov/beacon.nvim'
 
+  -- git graph
+  use 'tpope/vim-fugitive'
+  use 'rbong/vim-flog'
+
   require('utils').setup_user_plugins(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
