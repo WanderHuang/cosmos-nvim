@@ -1,12 +1,30 @@
-<h1 align="center">🪐 My Neovim Configuration 🚀</h1>
+# 🪐 好用的`neovim(0.6+)`配置！ 🚀
+
+## 我的`README`
+
+基于[cosmos-nvim](https://github.com/yetone/cosmos-nvim)配置的自己的neovim配置，带一些简单的注释
+
+安装步骤
+
+1. `git clone https://github.com/WanderHuang/nvim-lua-config-mac.git ~/.config/nvim`
+2. `vim +checkhealth`
+3. in vim: `:PackerInstall`
+
+## 特殊技能
+
+### 全局查找替换
+
+1. `<space>/`查找项目对应的字符串
+2. `<C-q>`把`telescope`查出来的数据导入`quickfix list`
+3. `[option]`过滤自己需要修改的数据要使用`cfilter`，加载`:packadd Cfilter`
+4. `:Cfilter YOUR_STRING`
+5. `:cdo s/ORIGIN/REPLACEMENT/gc`
+
+## 原始的`README`
+
+> [原仓库](https://github.com/yetone/cosmos-nvim)建议学一下，用了这套配置后，感觉`vim`曲线降低了
 
 <p align="center">A must-have configuration for Spacemacs users after defecting to Vim</p>
-
-<p align="center">
-    <a href="https://github.com/yetone/nvim/actions/workflows/build.yml">
-        <img alt="Build Status" src="https://github.com/yetone/nvim/actions/workflows/build.yml/badge.svg">
-    </a>
-</p>
 
 If you want the power of **VSCode**, the interactivity of **Spacemacs**, and the text-objects of **Vim**, I highly recommend you try this configuration.
 
@@ -14,7 +32,7 @@ If you want the power of **VSCode**, the interactivity of **Spacemacs**, and the
     <img src="https://rawcdn.githack.com/yetone/figure_bed/master/nvim_screenshots/dashboard2.png" >
 </p>
 
-# Key Features
+# Key features
 
 1. [LSP](https://microsoft.github.io/language-server-protocol/): [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig), [lspsaga](https://github.com/glepnir/lspsaga.nvim), [lspfuzzy](https://github.com/ojroques/nvim-lspfuzzy)
 
@@ -22,32 +40,18 @@ If you want the power of **VSCode**, the interactivity of **Spacemacs**, and the
 
 3. Looking forward to your continued exploration, [there are some screenshots](#some-screenshots)
 
-# Get A Taste Of
-
-If you're worried about breaking your current vim configuration but want to try it out for yourself, you can use docker to give it a quick try in an isolated environment:
-
-```bash
-docker run -it -w /root/.config/nvim yetone/cosmos-nvim nvim
-```
-
 # Install
 
-## 1. Requirements
-
-### Neovim 6+
+## 1. Install Neovim 6+
 
 **Only Neovim 6.0 and above are supported**, please refer to the official installation documentation of Neovim: [Install Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-
-### Nerd Fonts
-
-Go to [Nerd Fonts homepage](https://www.nerdfonts.com/) to download the patched fonts you are currently using.
 
 ## 2. Install my configuration
 
 ```bash
 mv ~/.config/nvim{,.yetone-backup} || true
 
-git clone --depth 1 https://github.com/yetone/cosmos-nvim.git ~/.config/nvim
+git clone https://github.com/yetone/nvim.git ~/.config/nvim
 ```
 
 ## 3. Install your language lsp server in your nvim
@@ -58,28 +62,7 @@ For example, if you are writing `Python`, you will need to open nvim and run the
 :LspInstall python
 ```
 
-# Custom Configuration
-
-If you want to define your own configuration, you can create a file called `.cosmos-nvim.lua` in the `$HOME` root directory, for example:
-
-`~/.cosmos-nvim.lua`
-
-```lua
-return {
-  setup_settings = function()
-    -- Put your settings here
-  end,
-  setup_mappings = function(wk)
-    -- Put your key mappings here and where you can group and name shortcuts with `which-key`
-  end,
-  setup_plugins = function(use)
-    -- Put the plugins you want to add here, where you can use the `use` function of `packer.nvim`
-    use 'wakatime/vim-wakatime'
-  end,
-}
-```
-
-# Some Screenshots
+# Some screenshots
 
 ## Which Key like spacemacs
 

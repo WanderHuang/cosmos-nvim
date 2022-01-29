@@ -15,16 +15,23 @@ g.neon_style = 'doom'
 g.EasyMotion_do_mapping = 0
 g.EasyMotion_smartcase = 1
 g.swoopAutoInsertMode = 1
-g.rust_clip_command = 'pbcopy'
-g.python3_host_prog = '~/.pyenv/versions/nvim-py3/bin/python'
+-- g.rust_clip_command = 'pbcopy'
+-- g.python3_host_prog = '~/.pyenv/versions/nvim-py3/bin/python'
 g.indentLine_fileTypeExclude = { 'alpha' }
 g.user_emmet_install_global = 0
-g.copilot_no_tab_map = true
-g.copilot_assume_mapped = true
+-- g.copilot_no_tab_map = true
+-- g.copilot_assume_mapped = true
+
+-- netrw
+-- g.netrw_banner = 1
+-- g.netrw_winsize = '80%'
+-- g.netrw_browse_split = 4
+-- g.netrw_altv = 1
+-- g.netrw_liststyle = 3
 
 opt.complete = ''
 opt.background = 'dark'
-vim.cmd('silent! colorscheme neon')
+-- vim.cmd('silent! colorscheme neon')
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
 
@@ -59,10 +66,6 @@ opt.expandtab = true
 opt.smartindent = true
 opt.smarttab = true
 
-vim.cmd [[
-autocmd FileType make setlocal noexpandtab
-]]
-
 opt.list = true
 opt.listchars = 'tab:»·,trail:·,nbsp:·'
 
@@ -73,6 +76,9 @@ opt.backspace = 'indent,eol,start'
 opt.clipboard = 'unnamed'
 opt.shell = 'zsh'
 
+-- 高亮配置
+g.Illuminate_delay = 300
+g.Illuminate_ftblacklist = {'nerdtree', 'netrw'}
 vim.cmd [[
 hi Pmenu ctermfg=white ctermbg=238
 ]]
@@ -84,6 +90,3 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 ]]
-
-require('utils').setup_user_settings()
-
