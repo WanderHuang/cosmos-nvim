@@ -2,6 +2,10 @@
 
 基于[cosmos-nvim](https://github.com/yetone/cosmos-nvim)配置的自己的neovim配置，带一些简单的注释
 
+前置依赖
+
+1. 搜索工具`ripgrep`, `fd`
+
 安装步骤
 
 1. `git clone https://github.com/WanderHuang/nvim-lua-config-mac.git ~/.config/nvim`
