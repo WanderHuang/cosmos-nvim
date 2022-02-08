@@ -157,6 +157,8 @@ nmap('<C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
 nmap('gs', "<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>") -- 签名查看
 nmap('gS', "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>") -- 诊断问题
 nmap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>'); -- 跳转实现
+nmap('gn', ':BufferLineCycleNext<CR>'); -- 下一个文件
+nmap('gp', ':BufferLineCyclePrev<CR>'); -- 上一个文件
 nmap('gr', "<cmd>lua require('lspsaga.rename').rename()<CR>") -- 重命名
 nmap('ca', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>") -- 代码操作
 vmap('ca', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>") -- 选中的代码操作
