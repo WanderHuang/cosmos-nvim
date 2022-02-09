@@ -695,14 +695,6 @@ utils.safe_require('nvim-tree', function(tree)
         cmd = "trash",
         require_confirm = true
       },
-      actions = {
-        change_dir = {
-          global = false,
-        },
-        open_file = {
-          quit_on_open = false,
-        }
-      }
     })
 end)
 

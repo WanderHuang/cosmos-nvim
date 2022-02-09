@@ -39,6 +39,7 @@ return a -- 返回模块
 - `vim.loop`: Neovim 的 event lopp 模块（使用 LibUV)
 - `vim.lsp`: 控制内置 LSP 客户端的模块
 - `vim.treesitter`: 暴露 tree-sitter 库中一些实用函数的模块
+- `vim.ui.select`: 选择框
 
 ## `VimScript`语法
 ```vim

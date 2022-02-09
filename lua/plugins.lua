@@ -42,12 +42,12 @@ return require('packer').startup(function(use)
 
     -- 记录工作时间的
     -- use 'wakatime/vim-wakatime'
-    use 'morhetz/gruvbox'
+    use 'morhetz/gruvbox' -- 主题
 
-    use 'nvim-lua/plenary.nvim'
+    use 'nvim-lua/plenary.nvim' -- vim的lua接口封装
 
     use 'ygm2/rooter.nvim'
-    use 'ahmedkhalf/project.nvim'
+    use 'ahmedkhalf/project.nvim' -- telescope 查找文件
     use 'ryanoasis/vim-devicons'
     use 'folke/which-key.nvim' -- 助记快捷键
     use 'tpope/vim-surround'
@@ -90,6 +90,7 @@ return require('packer').startup(function(use)
       requires = { {'nvim-lua/plenary.nvim'} }
     } -- 搜索 需要搭配ripgrep(live_grep grep_string功能)
     use 'nvim-telescope/telescope-file-browser.nvim'
+    use {'nvim-telescope/telescope-ui-select.nvim' } -- 选择框 vim.ui.select
 
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -128,7 +129,6 @@ return require('packer').startup(function(use)
     use 'rbong/vim-flog'
 
     -- rust 配置
-    use {'nvim-telescope/telescope-ui-select.nvim' }
     use 'simrat39/rust-tools.nvim'
     use {
         'saecki/crates.nvim',
@@ -158,7 +158,8 @@ return require('packer').startup(function(use)
         requires = {
           'kyazdani42/nvim-web-devicons', -- optional, for file icon
         },
-        config = function() require'nvim-tree'.setup {} end
+        config = function() require'nvim-tree'.setup {} end,
+        commit = "d8bf1adcdcc6a8a66c3dce5c29a4ef06e21dc844" -- 指定版本 最新版本可能会有问题
     }
     if packer_bootstrap then
       require('packer').sync()

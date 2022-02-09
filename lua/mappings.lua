@@ -102,7 +102,10 @@ utils.safe_require('which-key', function(wk)
     p = {
       name = '+Projects',
       p = { '<cmd>Telescope projects theme=ivy<CR>', 'List projects' },
-      f = { '<cmd>Telescope find_files<CR>', 'Find project files' }
+      f = { '<cmd>Telescope find_files<CR>', 'Find file by name(<CTRL-P>)' },
+      F = { ':Telescope live_grep<CR>', 'Find file by content(SPC /)'},
+      t = { ':NvimTreeToggle<CR>', 'Toggle directory tree' },
+      T = { ':NvimTreeToggle<CR>:NvimTreeToggle<CR>', 'Auto resize directory tree' }, -- tree 宽度auto_resize失效
     },
     j = {
       name = '+Jump',
@@ -154,6 +157,8 @@ nmap('gD', "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>") -- 预
 nmap('K', "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>") -- 显示文档定义
 nmap('<C-f>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>") -- 滚动hover 下
 nmap('<C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>") -- 滚动hover 上
+nmap('<C-p>', "<cmd>Telescope find_files<CR>") -- 查找文件
+nmap('gF', ":Telescope live_grep<CR>") -- 模糊查找文件
 nmap('gs', "<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>") -- 签名查看
 nmap('gS', "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>") -- 诊断问题
 nmap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>'); -- 跳转实现
@@ -164,7 +169,7 @@ nmap('ca', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>") -- 代码
 vmap('ca', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>") -- 选中的代码操作
 nmap('gh', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>") -- 异步查找单词定义、引用
 tmap('<ESC>', '<C-\\><C-n>:Lspsaga close_floaterm<CR>') -- 关闭终端
-set_keymap('n', 's', '<Plug>(easymotion-overwin-f)', {})
+-- set_keymap('n', 's', '<Plug>(easymotion-overwin-f)', {})
 set_keymap('n', '<leader>;;', 'gcc', {})
 set_keymap('v', '<leader>;', 'gcc<esc>', {})
 
