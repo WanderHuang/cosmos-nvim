@@ -12,6 +12,10 @@
 2. `vim +checkhealth`
 3. in vim: `:PackerInstall`
 
+## 一般技能
+
+写了一些常用键位记忆的清单，可以[在这里提取](./vim.keys.md)
+
 ## 特殊技能
 
 ### 全局查找替换
