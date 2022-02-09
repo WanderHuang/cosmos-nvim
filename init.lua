@@ -18,7 +18,7 @@ vim.cmd [[
 -- vim.api.nvim_set_option('tabpagemax', 8)
 
 -- 键位映射
-vim.cmd [[
+-- vim.cmd [[
   
-  inoremap jk <ESC>
-]]
+--   inoremap jk <ESC>
+-- ]]
