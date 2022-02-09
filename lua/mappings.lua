@@ -90,7 +90,7 @@ utils.safe_require('which-key', function(wk)
     f = {
       name = '+Files',
       f = { "<cmd>lua require'functions'.find_current_directory_files()<CR>", 'Find file' },
-      r = { '<cmd>Telescope oldfiles<cr>', 'Open recent file', noremap = false },
+      r = { '<cmd>Telescope oldfiles<CR>', 'Open recent file', noremap = false },
       e = {
         name = 'Config files',
         d = { "<cmd>lua require'functions'.edit_neovim()<CR>", 'Open dotfiles' },
@@ -138,12 +138,12 @@ utils.safe_require('which-key', function(wk)
         'gcc<Esc>', 'Comment line', noremap = false, mode = 'v',
       },
     },
-    ["T"] = { ':Lspsaga open_floaterm<CR>', 'Open Terminal' }, -- 打开终端
+    ["T"] = { ':Lspsaga open_floaterm<CR>', 'Open Terminal(exit with <ESC>)' }, -- 打开终端
     ['*'] = { "<cmd>lua require('telescope.builtin').lsp_references()<cr>", 'Search reference in current project' }, -- lsp 查找引用
     ['/'] = { ':Telescope live_grep<CR>', 'Fuzzy search in project' }, -- 项目内查找
     ['!'] = { ':Telescope help_tags theme=ivy<CR>', 'Help commands by fuzzy search' }, -- vim帮助查找
     ['<Tab>'] = { ':b#<CR>', 'Last buffer' },
-    ['t'] = { "<cmd> lua require('telescope.builtin').builtin()<CR>", 'Telescope current project' },
+    ['t'] = { "<cmd> lua require('telescope.builtin').builtin()<CR>", 'Telescope current working directory' },
     ['<Space>'] = { "<cmd>lua require('functions').commands(require('telescope.themes').get_ivy({}))<CR>", 'Commands' }, -- 查找命令
   }, { prefix = '<leader>' })
 end)
