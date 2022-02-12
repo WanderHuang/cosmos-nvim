@@ -18,25 +18,6 @@
 
 ## 特殊技能
 
-### 查找替换
-
-1. `/ORIGIN`查找
-2. `:s/ORIGIN/REPLACE`查找替换，当前行查找，也可以`:1,3/ORIGIN/REPLACE`表示替换第一行到第三行
-3. `visual mode`同样适用，可以用来区域替换
-4. `:%s`表示全文`:1,$`，从第一行到最后一行
-5. `:s/ORIGIN/REPLACE/g`中`/g`和正则里面一个意思，一行
-6. `/c`会出现确认提示，`yes/no`，配合使用`/gc`
-
-### quickfix
-
-这个列表用于快速跳转修复，属于原生能力，非常好用
-
-1. 在查找列表中使用`<tab>`可以选择可以把哪些文件添加到`quickfix list`，然后按`<CR>`可以添加
-2. 映射了`C-j C-k`为`:cnext :cprev`
-3. `:copen`打开
-4. `:cclose`关闭
-5. `:cexpr []`清空`quickfix list`
-
 ### 全局查找替换
 
 1. `<space>/`查找项目对应的字符串

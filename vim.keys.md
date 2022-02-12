@@ -34,6 +34,10 @@
 - `netrw` 可以使用`:Ex` `:Vex`搜索`Buffer`，「explore」
 - `:so %` 表示`source`当前文件
 - `m {key}`标记一个mark，在其他地方可以使用`' {key}`跳转回去，`:delm[arks] A-Z0-9`清空标记
+- `_`跳转到行首第一个非空格字符
+- `dt"`删除到下一个`"`，比如`abc "xxx" abc`删除为`"xxx" abc`
+- `'` 调用标签
+- `"` 调用寄存器
 
 ## 原生`.vimrc`配置格式
 
@@ -44,3 +48,30 @@
 set number
 set scrolloff=8
 ```
+
+##  原生能力
+
+### 查找替换
+
+1. `/ORIGIN`查找
+2. `:s/ORIGIN/REPLACE`查找替换，当前行查找，也可以`:1,3/ORIGIN/REPLACE`表示替换第一行到第三行
+3. `visual mode`同样适用，可以用来区域替换
+4. `:%s`表示全文`:1,$`，从第一行到最后一行
+5. `:s/ORIGIN/REPLACE/g`中`/g`和正则里面一个意思，一行
+6. `/c`会出现确认提示，`yes/no`，配合使用`/gc`
+
+### quickfix
+
+这个列表用于快速跳转修复，属于原生能力，非常好用
+
+1. 在查找列表中使用`<tab>`可以选择可以把哪些文件添加到`quickfix list`，然后按`<CR>`可以添加
+2. 映射了`C-j C-k`为`:cnext :cprev`
+3. `:copen`打开
+4. `:cclose`关闭
+5. `:cexpr []`清空`quickfix list`
+
+### 宏
+
+1. `q {key} {Motions} q` 使用`q`开始和`q`结束
+2. `q a Vyp q`表示记录一个宏`@a`，宏的动作为`Vyp`，复制行并粘贴，宏定义好之后就可以使用`@a`调用`Vyp`这个连续的操作
+
