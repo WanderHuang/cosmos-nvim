@@ -33,7 +33,7 @@
 - `<C-w>` 和窗口相关
 - `netrw` 可以使用`:Ex` `:Vex`搜索`Buffer`，「explore」
 - `:so %` 表示`source`当前文件
-- `m {key}`标记一个mark，在其他地方可以使用`' {key}`跳转回去
+- `m {key}`标记一个mark，在其他地方可以使用`' {key}`跳转回去，`:delm[arks] A-Z0-9`清空标记
 
 ## 原生`.vimrc`配置格式
 
