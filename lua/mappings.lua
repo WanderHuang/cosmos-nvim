@@ -52,7 +52,8 @@ set_keymap('c', '<C-b>', '<Left>', {})
 set_keymap('c', '<C-f>', '<Right>', {})
 set_keymap('c', '<C-a>', '<Home>', {})
 set_keymap('c', '<C-e>', '<End>', {})
-set_keymap('c', '<C-d>', '<Del>', {})
+-- C-d 本身表示显示详情，可用命令
+-- set_keymap('c', '<C-d>', '<Del>', {})
 set_keymap('c', '<C-h>', '<BS>', { noremap = true })
 set_keymap('c', '<C-k>', '<C-f>D<C-c><C-c>:<Up>', { noremap = true })
 -- End of setup for emacs keybindings
