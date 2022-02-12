@@ -44,6 +44,8 @@ set_keymap('i', '<C-n>', '<Down>', {})
 -- normal mode
 set_keymap('n', '<C-p>', '<Up>', {})
 set_keymap('n', '<C-n>', '<Down>', {})
+set_keymap('n', '<C-j>', ':cnext<CR>', {}) -- quickfixlist 跳转
+set_keymap('n', '<C-k>', ':cprev<CR>', {})
 
 -- command line mode
 set_keymap('c', '<C-p>', '<Up>', {})
