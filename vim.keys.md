@@ -69,9 +69,15 @@ set scrolloff=8
 3. `:copen`打开
 4. `:cclose`关闭
 5. `:cexpr []`清空`quickfix list`
+6. `packadd cfilter` 增加过滤功能，然后可以使用`:Cfilter REG`
 
 ### 宏
 
 1. `q {key} {Motions} q` 使用`q`开始和`q`结束
 2. `q a Vyp q`表示记录一个宏`@a`，宏的动作为`Vyp`，复制行并粘贴，宏定义好之后就可以使用`@a`调用`Vyp`这个连续的操作
+
+
+### buffer处理
+
+1. `:%bd|e#` 关闭所有buffer并打开最后一个buffer
 
