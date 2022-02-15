@@ -2,6 +2,21 @@
 
 基于[cosmos-nvim](https://github.com/yetone/cosmos-nvim)配置的自己的neovim配置，带一些简单的注释
 
+## 展示
+
+<img width="1657" alt="截屏2022-02-15 上午9 59 27" src="https://user-images.githubusercontent.com/18475942/153978311-2088edab-dc6f-40b5-88ef-12f1baf1363d.png">
+
+### 功能
+
+- [x] 文件树
+- [x] 模糊查找：全局查找
+- [x] `LSP`：语法检查、格式化、错误处理等
+- [x] 文件查找：文件名查找
+- [x] `Git`：状态、图表
+- [x] 帮助按键：`<leader> <Space>`
+
+## 安装使用
+
 前置依赖
 
 1. 搜索工具`ripgrep`, `fd`
