@@ -172,6 +172,7 @@ nmap('ca', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>") -- 代码
 vmap('ca', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>") -- 选中的代码操作
 nmap('gh', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>") -- 异步查找单词定义、引用
 tmap('<ESC>', '<C-\\><C-n>:Lspsaga close_floaterm<CR>') -- 关闭终端
+imap('<C-c>', "<ESC>")
 -- set_keymap('n', 's', '<Plug>(easymotion-overwin-f)', {})
 set_keymap('n', '<leader>;;', 'gcc', {})
 set_keymap('v', '<leader>;', 'gcc<esc>', {})
