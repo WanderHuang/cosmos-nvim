@@ -4,6 +4,8 @@ require('settings')
 require('config')
 require('mappings') -- 键位映射关系
 
+require('lsp')
+
 -- %%%%%%%%%%%%%%%%%
 -- 自定义字段
 -- %%%%%%%%%%%%%%%%%
