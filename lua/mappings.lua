@@ -44,8 +44,12 @@ set_keymap('i', '<C-n>', '<Down>', {})
 -- normal mode
 set_keymap('n', '<C-p>', '<Up>', {})
 set_keymap('n', '<C-n>', '<Down>', {})
-set_keymap('n', '<C-j>', ':cnext<CR>', {}) -- quickfixlist 跳转
-set_keymap('n', '<C-k>', ':cprev<CR>', {})
+set_keymap('n', '<C-h>', '<Left>', {})
+set_keymap('n', '<C-l>', '<Right>', {})
+-- set_keymap('n', '<C-j>', ':cnext<CR>', {}) -- quickfixlist 跳转
+-- set_keymap('n', '<C-k>', ':cprev<CR>', {})
+set_keymap('n', '<C-j>', ':bn<CR>', {}) -- buffer prev/next
+set_keymap('n', '<C-k>', ':bp<CR>', {})
 
 -- command line mode
 set_keymap('c', '<C-p>', '<Up>', {})
