@@ -44,8 +44,12 @@ set_keymap('i', '<C-n>', '<Down>', {})
 -- normal mode
 set_keymap('n', '<C-p>', '<Up>', {})
 set_keymap('n', '<C-n>', '<Down>', {})
-set_keymap('n', '<C-j>', ':cnext<CR>', {}) -- quickfixlist 跳转
-set_keymap('n', '<C-k>', ':cprev<CR>', {})
+set_keymap('n', '<C-h>', '<Left>', {})
+set_keymap('n', '<C-l>', '<Right>', {})
+-- set_keymap('n', '<C-j>', ':cnext<CR>', {}) -- quickfixlist 跳转
+-- set_keymap('n', '<C-k>', ':cprev<CR>', {})
+set_keymap('n', '<C-j>', ':bn<CR>', {}) -- buffer prev/next
+set_keymap('n', '<C-k>', ':bp<CR>', {})
 
 -- command line mode
 set_keymap('c', '<C-p>', '<Up>', {})
@@ -160,7 +164,7 @@ nmap('gD', "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>") -- 预
 nmap('K', "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>") -- 显示文档定义
 nmap('<C-f>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>") -- 滚动hover 下
 nmap('<C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>") -- 滚动hover 上
-nmap('<C-p>', "<cmd>Telescope find_files<CR>") -- 查找文件
+-- nmap('<C-p>', "<cmd>Telescope find_files<CR>") -- 查找文件
 nmap('gF', ":Telescope live_grep<CR>") -- 模糊查找文件
 nmap('gs', "<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>") -- 签名查看
 nmap('gS', "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>") -- 诊断问题
