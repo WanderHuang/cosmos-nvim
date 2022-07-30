@@ -23,7 +23,7 @@
 
 安装步骤
 
-1. `git clone https://github.com/WanderHuang/nvim-lua-config-mac.git ~/.config/nvim`
+1. `git clone https://github.com/WanderHuang/nvim-config-lua-mac.git ~/.config/nvim`
 2. `vim +checkhealth`
 3. in vim: `:PackerInstall`
 
